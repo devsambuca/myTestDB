@@ -23,4 +23,5 @@
 
 # SELECT * FROM developers JOIN skills_developers USING(dev_id);
 # SELECT * FROM (developers JOIN skills_developers USING(dev_id)) JOIN skills USING (sk_id) WHERE developers.dev_name = 'Glazirin Evgeniy';
-SELECT * FROM (developers JOIN skills_developers USING(dev_id)) JOIN skills USING (sk_id) WHERE developers.dev_id = 3;
+# SELECT * FROM (developers JOIN skills_developers USING(dev_id)) JOIN skills USING (sk_id) WHERE developers.dev_id = 3;
+SELECT * FROM (developers JOIN skills_developers USING(dev_id)) JOIN skills USING (sk_id) WHERE skills.sk_id = 4;
