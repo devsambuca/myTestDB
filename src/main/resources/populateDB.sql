@@ -32,23 +32,23 @@
 # SELECT dev_name, sk_name FROM (developers JOIN skills_developers USING(dev_id)) JOIN skills USING (sk_id) WHERE developers.dev_id = 3;
 # SELECT * FROM (developers JOIN skills_developers USING(dev_id)) JOIN skills USING (sk_id) WHERE skills.sk_id = 4;
 
-/*Добавление проектов в таблицу projects*/
-
+# /*Добавление проектов в таблицу projects*/
+#
 # INSERT INTO projects (proj_id, proj_name) VALUES (1, 'Database');
 # INSERT INTO projects (proj_id, proj_name) VALUES (2, 'Websait');
 # INSERT INTO projects (proj_id, proj_name) VALUES (3, 'Blog');
 # INSERT INTO projects (proj_id, proj_name) VALUES (4, 'Software "Lotus"');
-
-/*Добавление компаний в таблицу companies*/
-
+#
+# /*Добавление компаний в таблицу companies*/
+#
 # INSERT INTO companies(company_id, company_name) VALUES (1, 'HP');
 # INSERT INTO companies(company_id, company_name) VALUES (2, 'AK BARS BANK');
 # INSERT INTO companies(company_id, company_name) VALUES (3, 'FrutoNyanya');
 # INSERT INTO companies(company_id, company_name) VALUES (4, 'OAO "ZPP"');
 # INSERT INTO companies(company_id, company_name) VALUES (5, 'TatNeft');
-
-/*Добавление данных в таблицу компании и проекты*/
-
+#
+# /*Добавление данных в таблицу компании и проекты*/
+#
 # INSERT INTO projects_companies(proj_company_id, proj_id, company_id) VALUES (1,2,1);
 # INSERT INTO projects_companies(proj_company_id, proj_id, company_id) VALUES (2,1,3);
 # INSERT INTO projects_companies(proj_company_id, proj_id, company_id) VALUES (3,4,4);
@@ -61,6 +61,8 @@
 # ALTER TABLE projects ADD CONSTRAINT un_proj_id_constraint UNIQUE (proj_id);
 # ALTER TABLE projects_companies ADD CONSTRAINT un_proj_company_id_constraint UNIQUE (proj_company_id);
 
-SELECT * FROM companies JOIN projects_companies USING(company_id);
+# SELECT * FROM companies JOIN projects_companies USING(company_id);
+
+
 
 

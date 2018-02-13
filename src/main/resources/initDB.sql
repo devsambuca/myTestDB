@@ -1,12 +1,18 @@
+# /*Create table developers*/
+#
 # CREATE TABLE developers (
 #   dev_id   INT          NOT NULL PRIMARY KEY,
 #   dev_name VARCHAR(100) NOT NULL
 # );
 #
+# /*Create table skills*/
+#
 # CREATE TABLE skills (
 #   sk_id   INT          NOT NULL PRIMARY KEY,
 #   sk_name VARCHAR(100) NOT NULL
 # );
+#
+# /*Create table skill_developers with links*/
 #
 # CREATE TABLE skills_developers (
 #   sk_dev_id INT NOT NULL PRIMARY KEY,
@@ -16,28 +22,46 @@
 #   FOREIGN KEY (sk_id) REFERENCES skills (sk_id)
 # );
 
-# DROP TABLE developers;
-# DROP  TABLE skills;
-# DROP  TABLE skills_developers;
+# /*Create table projects*/
+#
+# CREATE TABLE projects (
+#   proj_id   INT          NOT NULL PRIMARY KEY,
+#   proj_name VARCHAR(100) NOT NULL
+# );
+#
+# /*Create table companies*/
+#
+# CREATE TABLE companies (
+#   company_id   INT          NOT NULL PRIMARY KEY,
+#   company_name VARCHAR(100) NOT NULL
+# );
+#
+# /*Create table projects_companies with links*/
+#
+# CREATE TABLE projects_companies (
+#   proj_company_id INT NOT NULL PRIMARY KEY,
+#   proj_id         INT NOT NULL,
+#   company_id      INT NOT NULL,
+#   FOREIGN KEY (proj_id) REFERENCES projects (proj_id),
+#   FOREIGN KEY (company_id) REFERENCES companies (company_id)
+# );
+#
+# /*Create table customers*/
+#
+# CREATE TABLE customers (
+#   cust_id   INT          NOT NULL PRIMARY KEY,
+#   cust_name VARCHAR(100) NOT NULL
+#   cust_address VARCHAR(100) NOT NULL
+# );
+#
+# /*Create table projects_customers with links*/
+#
+# CREATE TABLE projects_customers (
+#   proj_cust_id INT NOT NULL PRIMARY KEY,
+#   proj_id         INT NOT NULL,
+#   cust_id      INT NOT NULL,
+#   FOREIGN KEY (proj_id) REFERENCES projects (proj_id),
+#   FOREIGN KEY (cust_id) REFERENCES customers (cust_id)
+# );
 
-/*Create table projects*/
-CREATE TABLE projects (
-  proj_id INT NOT NULL PRIMARY KEY ,
-  proj_name VARCHAR(100) NOT NULL
-);
-
-/*Create table companies*/
-CREATE TABLE companies (
-  company_id INT NOT NULL PRIMARY KEY ,
-  company_name VARCHAR(100) NOT NULL
-);
-
-/*Create table projects_companies*/
-CREATE TABLE projects_companies (
-  proj_company_id INT NOT NULL PRIMARY KEY,
-  proj_id    INT NOT NULL,
-  company_id     INT NOT NULL,
-  FOREIGN KEY (proj_id) REFERENCES projects (proj_id),
-  FOREIGN KEY (company_id) REFERENCES companies (company_id)
-);
 
