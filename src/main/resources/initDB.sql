@@ -26,13 +26,11 @@ CREATE TABLE skills_developers (
 
 CREATE TABLE projects_developers (
   proj_dev_id INT NOT NULL PRIMARY KEY,
-  dev_id    INT NOT NULL,
+  dev_id      INT NOT NULL,
   proj_id     INT NOT NULL,
   FOREIGN KEY (dev_id) REFERENCES developers (dev_id),
   FOREIGN KEY (proj_id) REFERENCES skills (proj_id)
 );
-
-
 
 /*Create table projects*/
 
@@ -61,8 +59,8 @@ CREATE TABLE projects_companies (
 /*Create table customers*/
 
 CREATE TABLE customers (
-  cust_id   INT          NOT NULL PRIMARY KEY,
-  cust_name VARCHAR(100) NOT NULL,
+  cust_id      INT          NOT NULL PRIMARY KEY,
+  cust_name    VARCHAR(100) NOT NULL,
   cust_address VARCHAR(100) NOT NULL
 );
 
@@ -70,7 +68,7 @@ CREATE TABLE customers (
 
 CREATE TABLE projects_customers (
   proj_cust_id INT NOT NULL PRIMARY KEY,
-  proj_id         INT NOT NULL,
+  proj_id      INT NOT NULL,
   cust_id      INT NOT NULL,
   FOREIGN KEY (proj_id) REFERENCES projects (proj_id),
   FOREIGN KEY (cust_id) REFERENCES customers (cust_id)
