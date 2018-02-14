@@ -69,3 +69,12 @@ CREATE TABLE projects_customers (
   FOREIGN KEY (proj_id) REFERENCES projects (id),
   FOREIGN KEY (cust_id) REFERENCES customers (id)
 );
+
+/*Create table customers_company with links*/
+
+CREATE TABLE customers_company (
+  cust_id      INT NOT NULL,
+  company_id      INT NOT NULL,
+  FOREIGN KEY (cust_id) REFERENCES customers (id),
+  FOREIGN KEY (company_id) REFERENCES companies (id)
+);
