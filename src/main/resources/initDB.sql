@@ -50,7 +50,6 @@ CREATE TABLE projects_developers (
   dev_id      INT NOT NULL,
   FOREIGN KEY (proj_id) REFERENCES projects (id),
   FOREIGN KEY (dev_id) REFERENCES developers (id)
-
 );
 
 /*Create table projects_companies with links*/

@@ -54,7 +54,6 @@ INSERT INTO projects_developers (proj_id, dev_id) VALUES (1, 2);
 INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 5);
 INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 1);
 INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 1);
-INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 1);
 INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 3);
 INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 4);
 
