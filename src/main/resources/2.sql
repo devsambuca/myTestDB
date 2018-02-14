@@ -1,12 +1,6 @@
 
-
-
-
-
-
-
-# ALTER TABLE developers ADD CONSTRAINT un_dev_id_constraint UNIQUE (dev_id);
-# ALTER TABLE skills ADD CONSTRAINT un_sk_id_constraint UNIQUE (sk_id);
+# ALTER TABLE developers ADD CONSTRAINT un_dev_id_constraint UNIQUE (id);
+# ALTER TABLE projects ADD CONSTRAINT un_sk_id_constraint UNIQUE (id);
 
 # ALTER TABLE skills_developers ADD CONSTRAINT un_sk_dev_id_constraint UNIQUE (sk_dev_id);
 #
