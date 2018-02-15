@@ -70,6 +70,15 @@
 # INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 1);
 # INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 3);
 # INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 4);
+# INSERT INTO projects_developers (proj_id, dev_id) VALUES (1, 1);
+# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 2);
+# INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 6);
+# INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 7);
+# INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 8);
+# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 9);
+# INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 8);
+# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 9);
+# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 1);
 #
 # /*Добавление данных в таблицу проекты компаний*/
 #
@@ -78,7 +87,7 @@
 # INSERT INTO projects_companies (proj_id, company_id) VALUES (4, 4);
 # INSERT INTO projects_companies (proj_id, company_id) VALUES (3, 1);
 # INSERT INTO projects_companies (proj_id, company_id) VALUES (3, 3);
-# INSERT INTO projects_companies (proj_id, company_id) VALUES (2, 5);
+# INSERT INTO projects_companies (proj_id, company_id) VALUES (2, 3);
 # INSERT INTO projects_companies (proj_id, company_id) VALUES (4, 2);
 #
 # /*Добавление данных в таблицу проекты клиентов*/
@@ -95,12 +104,12 @@
 
 /*Добавление данных в таблицу клиенты компаний*/
 
-# INSERT INTO customers_company (cust_id, company_id) VALUES (1,5);
+# INSERT INTO customers_company (cust_id, company_id) VALUES (1,4);
 # INSERT INTO customers_company (cust_id, company_id) VALUES (2,4);
 # INSERT INTO customers_company (cust_id, company_id) VALUES (3,3);
 # INSERT INTO customers_company (cust_id, company_id) VALUES (4,2);
 # INSERT INTO customers_company (cust_id, company_id) VALUES (5,1);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (6,5);
+# INSERT INTO customers_company (cust_id, company_id) VALUES (6,1);
 # INSERT INTO customers_company (cust_id, company_id) VALUES (1,4);
 # INSERT INTO customers_company (cust_id, company_id) VALUES (2,3);
 # INSERT INTO customers_company (cust_id, company_id) VALUES (3,2);
