@@ -1,13 +1,34 @@
+CREATE TEMPORARY TABLE profit2
 SELECT
-  customers.*,
-  companies.name,
-  projects.cost
+  customers.id,
+  customers.name AS customer_name,
+  projects.id as prog_id,
+  projects.name,
+  projects.cost as profit
 FROM customers
-  INNER JOIN projects_customers ON (projects_customers.cust_id = customers.id)
-  INNER JOIN projects ON (projects.id = projects_customers.proj_id)
-  INNER JOIN customers_company ON (customers_company.cust_id = customers.id)
-  INNER JOIN companies ON (companies.id = customers_company.company_id)
-ORDER BY companies.name;
+  LEFT JOIN projects_customers on (projects_customers.cust_id = customers.id )
+  JOIN projects on projects_customers.proj_id = projects.id
+ORDER BY projects.cost;
+
+
+
+# SELECT
+#   customers.id,
+#   customers.name AS customer_name,
+#   companies.name,
+#   sum(projects.cost) as profit
+# FROM companies
+#   JOIN projects_companies
+#   JOIN projects_customers
+#   LEFT JOIN projects on (companies.id = projects_companies.company_id)
+#   JOIN customers on projects_customers.cust_id = company_id
+# ;
+
+
+
+
+
+
 
 #
 #

@@ -101,16 +101,15 @@
 # INSERT INTO projects_customers (proj_id, cust_id) VALUES (4, 2);
 # INSERT INTO projects_customers (proj_id, cust_id) VALUES (4, 1);
 # INSERT INTO projects_customers (proj_id, cust_id) VALUES (1, 6);
-
-/*Добавление данных в таблицу клиенты компаний*/
-
-# INSERT INTO customers_company (cust_id, company_id) VALUES (1,4);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (2,4);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (3,3);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (4,2);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (5,1);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (6,1);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (1,4);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (2,3);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (3,2);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (4,1);
+#
+# /*Добавление данных в таблицу клиенты компаний*/
+#
+INSERT INTO customers_company (cust_id, company_id) VALUES (1,4);
+INSERT INTO customers_company (cust_id, company_id) VALUES (2,4);
+INSERT INTO customers_company (cust_id, company_id) VALUES (3,3);
+INSERT INTO customers_company (cust_id, company_id) VALUES (4,2);
+INSERT INTO customers_company (cust_id, company_id) VALUES (5,1);
+INSERT INTO customers_company (cust_id, company_id) VALUES (6,1);
+INSERT INTO customers_company (cust_id, company_id) VALUES (1,3);
+INSERT INTO customers_company (cust_id, company_id) VALUES (2,3);
+INSERT INTO customers_company (cust_id, company_id) VALUES (3,2);
