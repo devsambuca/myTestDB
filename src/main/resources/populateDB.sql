@@ -44,73 +44,72 @@
 # INSERT INTO customers (id, name, address) VALUES (4, 'Galina Ganina', 'Yoshkar-Ola, Pushkina 16-3');
 # INSERT INTO customers (id, name, address) VALUES (5, 'Aleksandr Korolen', 'Kazan, Dekabristov 1-89');
 # INSERT INTO customers (id, name, address) VALUES (6, 'Maksim Petrov', 'Moscow, Zelenaya 24-11');
-#
-# /*Добавление данных в таблицу навыки разработчиков*/
-#
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (1, 6);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (2, 1);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (2, 8);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (3, 3);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (3, 4);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (4, 4);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (5, 1);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (5, 4);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (6, 2);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (6, 6);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (6, 7);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (7, 4);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (8, 1);
-# INSERT INTO skills_developers (dev_id, sk_id) VALUES (9, 5);
-#
-# /*Добавление данных в таблицу проекты разработчиков*/
-#
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (1, 2);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 5);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 1);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 1);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 3);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 4);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (1, 1);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 2);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 6);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 7);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 8);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 9);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 8);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 9);
-# INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 1);
-#
-# /*Добавление данных в таблицу проекты компаний*/
-#
-# INSERT INTO projects_companies (proj_id, company_id) VALUES (2, 1);
-# INSERT INTO projects_companies (proj_id, company_id) VALUES (1, 3);
-# INSERT INTO projects_companies (proj_id, company_id) VALUES (4, 4);
-# INSERT INTO projects_companies (proj_id, company_id) VALUES (3, 1);
-# INSERT INTO projects_companies (proj_id, company_id) VALUES (3, 3);
-# INSERT INTO projects_companies (proj_id, company_id) VALUES (2, 3);
-# INSERT INTO projects_companies (proj_id, company_id) VALUES (4, 2);
-#
-# /*Добавление данных в таблицу проекты клиентов*/
-#
-# INSERT INTO projects_customers (proj_id, cust_id) VALUES (1, 1);
-# INSERT INTO projects_customers (proj_id, cust_id) VALUES (1, 2);
-# INSERT INTO projects_customers (proj_id, cust_id) VALUES (2, 3);
-# INSERT INTO projects_customers (proj_id, cust_id) VALUES (2, 6);
-# INSERT INTO projects_customers (proj_id, cust_id) VALUES (3, 5);
-# INSERT INTO projects_customers (proj_id, cust_id) VALUES (3, 4);
-# INSERT INTO projects_customers (proj_id, cust_id) VALUES (4, 2);
-# INSERT INTO projects_customers (proj_id, cust_id) VALUES (4, 1);
-# INSERT INTO projects_customers (proj_id, cust_id) VALUES (1, 6);
+
+/*Добавление данных в таблицу навыки разработчиков*/
+
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (1, 6);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (2, 1);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (2, 8);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (3, 3);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (3, 4);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (4, 4);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (5, 1);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (5, 4);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (6, 2);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (6, 6);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (6, 7);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (7, 4);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (8, 1);
+INSERT INTO skills_developers (dev_id, sk_id) VALUES (9, 5);
+
+/*Добавление данных в таблицу проекты разработчиков*/
+
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (1, 2);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 5);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 1);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 1);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 3);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 4);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (1, 1);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 2);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 6);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 7);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (3, 8);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 9);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (4, 8);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 9);
+INSERT INTO projects_developers (proj_id, dev_id) VALUES (2, 1);
+
+/*Добавление данных в таблицу проекты компаний*/
+
+INSERT INTO projects_companies (proj_id, company_id) VALUES (2, 1);
+INSERT INTO projects_companies (proj_id, company_id) VALUES (1, 3);
+INSERT INTO projects_companies (proj_id, company_id) VALUES (4, 4);
+INSERT INTO projects_companies (proj_id, company_id) VALUES (3, 1);
+INSERT INTO projects_companies (proj_id, company_id) VALUES (3, 3);
+INSERT INTO projects_companies (proj_id, company_id) VALUES (2, 3);
+INSERT INTO projects_companies (proj_id, company_id) VALUES (4, 2);
+
+/*Добавление данных в таблицу проекты клиентов*/
+
+INSERT INTO projects_customers (proj_id, cust_id) VALUES (1, 1);
+INSERT INTO projects_customers (proj_id, cust_id) VALUES (1, 2);
+INSERT INTO projects_customers (proj_id, cust_id) VALUES (2, 3);
+INSERT INTO projects_customers (proj_id, cust_id) VALUES (2, 6);
+INSERT INTO projects_customers (proj_id, cust_id) VALUES (3, 5);
+INSERT INTO projects_customers (proj_id, cust_id) VALUES (3, 4);
+INSERT INTO projects_customers (proj_id, cust_id) VALUES (4, 2);
+INSERT INTO projects_customers (proj_id, cust_id) VALUES (4, 1);
+INSERT INTO projects_customers (proj_id, cust_id) VALUES (1, 6);
 
 /*Добавление данных в таблицу клиенты компаний*/
 
-# INSERT INTO customers_company (cust_id, company_id) VALUES (1,4);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (2,4);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (3,3);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (4,2);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (5,1);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (6,1);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (1,4);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (2,3);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (3,2);
-# INSERT INTO customers_company (cust_id, company_id) VALUES (4,1);
+INSERT INTO customers_company (cust_id, company_id) VALUES (1,4);
+INSERT INTO customers_company (cust_id, company_id) VALUES (2,4);
+INSERT INTO customers_company (cust_id, company_id) VALUES (3,3);
+INSERT INTO customers_company (cust_id, company_id) VALUES (4,2);
+INSERT INTO customers_company (cust_id, company_id) VALUES (5,1);
+INSERT INTO customers_company (cust_id, company_id) VALUES (6,1);
+INSERT INTO customers_company (cust_id, company_id) VALUES (2,3);
+INSERT INTO customers_company (cust_id, company_id) VALUES (3,2);
+INSERT INTO customers_company (cust_id, company_id) VALUES (4,1);

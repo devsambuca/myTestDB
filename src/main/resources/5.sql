@@ -1,13 +1,13 @@
-SELECT
-  customers.*,
-  companies.name,
-  projects.cost
-FROM customers
-  INNER JOIN projects_customers ON (projects_customers.cust_id = customers.id)
-  INNER JOIN projects ON (projects.id = projects_customers.proj_id)
-  INNER JOIN customers_company ON (customers_company.cust_id = customers.id)
-  INNER JOIN companies ON (companies.id = customers_company.company_id)
-ORDER BY companies.name;
+# SELECT
+#   customers.*,
+#   companies.name,
+#   projects.cost
+# FROM customers
+#   INNER JOIN projects_customers ON (projects_customers.cust_id = customers.id)
+#   INNER JOIN projects ON (projects.id = projects_customers.proj_id)
+#   INNER JOIN customers_company ON (customers_company.cust_id = customers.id)
+#   INNER JOIN companies ON (companies.id = customers_company.company_id)
+# ORDER BY companies.name;
 
 #
 #
@@ -24,3 +24,10 @@ ORDER BY companies.name;
 #
 #     INNER JOIN projects on projects.id = projects_companies.proj_id
 #   GROUP BY company_name;
+
+
+TRUNCATE TABLE skills_developers;
+TRUNCATE TABLE projects_companies;
+TRUNCATE TABLE customers_company;
+TRUNCATE TABLE projects_developers;
+TRUNCATE TABLE projects_customers;
