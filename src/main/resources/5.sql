@@ -1,85 +1,40 @@
-# # CREATE TEMPORARY TABLE customers_profit
-# SELECT
-#   customers.id as cust_id,
-#   customers.name as cust_name,
-#   projects.id as proj_id,
-#   projects.name as proj_name,
-#   projects.cost as profit
-# FROM customers
-#   CROSS JOIN  projects_customers on customers.id = projects_customers.cust_id
-#   CROSS JOIN projects on projects_customers.proj_id = projects.id
-# ORDER BY profit;
-#
-#
-#
-# SELECT
-#   cust_name,
-#   companies.name
-# FROM customers_profit
-# JOIN customers_company on customers_profit.cust_id = customers_company.cust_id
-# JOIN companies on companies.id = customers_company.company_id;
-#
-#
-# SELECT
-#   companies.name as company_name,
-#   projects.name as project_name,
-#   min(projects.cost) as min_profit
-# FROM companies
-# JOIN projects_companies on companies.id = projects_companies.company_id
-# JOIN projects on projects_companies.proj_id = projects.id
-# GROUP BY companies.name;
-#
-# SELECT
-#   companies.*,
-#   projects.name,
-#   projects.cost
-# FROM companies
-# JOIN projects_companies on companies.id = projects_companies.company_id
-# JOIN projects on projects_companies.proj_id = projects.id;
+/*Найти клиента (customer), который приносит меньше всего прибыли
+компании (company) для каждой из компаний*/
 
-CREATE TEMPORARY TABLE temp_table
-SELECT
-  cust_id,
-  company_id,
-  sum(cost) as profit
-FROM(SELECT
-        p.*,
-        projects_customers.cust_id,
-  projects_companies.company_id
-      FROM projects p
-        JOIN projects_customers on p.id = projects_customers.proj_id
-        JOIN projects_companies on p.id = projects_companies.proj_id) as temp1
-GROUP BY company_id, cust_id;
+CREATE TEMPORARY TABLE profit_t
+  SELECT
+    customer_id,
+    companies_id,
+    sum(cost) AS profit
+  FROM
+    (SELECT
+       projects_customers.cust_id    AS customer_id,
+       projects_companies.company_id AS companies_id,
+       projects.cost                 AS cost
+     FROM projects
+       INNER JOIN projects_customers ON projects.id = projects_customers.proj_id
+       INNER JOIN projects_companies ON projects.id = projects_companies.proj_id) AS temporarytable
+  GROUP BY companies_id, customer_id;
+
+
+CREATE TEMPORARY TABLE min_profit
+  SELECT
+    companies_id,
+    min(profit) AS minimun
+  FROM profit_t
+  GROUP BY companies_id;
 
 SELECT
-  cust_id,
-  company_id,
-  profit
-FROM temp_table
-  INNER JOIN (SELECT company_id, min(profit)
-              FROM temp_table
-              GROUP BY company_id)
-    AS temp1 using(company_id)
+  profit_t.customer_id,
+  customers.name AS customer_name,
+  profit_t.companies_id,
+  companies.name AS company_name,
+  profit_t.profit
+FROM profit_t
+  INNER JOIN min_profit ON profit_t.profit = min_profit.minimun
+                           AND profit_t.companies_id = min_profit.companies_id
+  INNER JOIN customers ON profit_t.customer_id = customers.id
+  INNER JOIN companies ON profit_t.companies_id = companies.id;
 
-#
-#
-# SELECT developers.*,projects.* FROM developers,projects_developers,projects
-# WHERE projects.id = projects_developers.proj_id AND developers.id = projects_developers.dev_id;
-
-# CREATE TEMPORARY TABLE profit
-#   SELECT
-#     companies.name AS company_name,
-#
-#     sum(projects.cost) AS profit_sum
-#   FROM companies
-#     INNER JOIN projects_companies ON companies.id = projects_companies.company_id
-#
-#     INNER JOIN projects on projects.id = projects_companies.proj_id
-#   GROUP BY company_name;
-
-
-# TRUNCATE TABLE skills_developers;
-# TRUNCATE TABLE projects_companies;
-# TRUNCATE TABLE customers_company;
-# TRUNCATE TABLE projects_developers;
-# TRUNCATE TABLE projects_customers;
+# DROP TEMPORARY TABLE profit_t;
+# DROP TEMPORARY TABLE min_profit;
